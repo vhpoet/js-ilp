@@ -122,7 +122,6 @@ function createReceiver (opts) {
       data: packet.data.data
     }
 
-
     if ((new BigNumber(transfer.amount)).lessThan(packet.amount)) {
       debug('got notification of transfer where amount is less than expected (' + packet.amount + ')', transfer)
       return 'insufficient'
